@@ -1,0 +1,19 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Curso com cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomaserick/cypress.git"
+  },
+  "author": "Thomas Erick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomaserick/cypress/issues"
+  },
+  "homepage": "https://github.com/thomaserick/cypress#readme"
+}
