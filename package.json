@@ -4,7 +4,9 @@
   "description": "Curso com cypress",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress open",
+    "e2e": "npx cypress run",
+    "report":"npx cypress run --reporter mochawesome"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/thomaserick/cypress#readme",
   "devDependencies": {
-    "cypress": "^10.2.0"
+    "cypress": "^10.2.0",
+    "mochawesome": "^7.1.3"
   }
 }

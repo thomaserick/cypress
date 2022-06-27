@@ -2,9 +2,13 @@
 
 Curso Cypress
 
-### Intalando o cypress
+Intalando o cypress
 
--npm i cypress@9.1.1 --save -include=dev
+- npm i cypress@9.1.1 --save -include=dev
+
+Relatorio mais detalhado
+
+- npm i -D mochawesome
 
 ### Comando
 
