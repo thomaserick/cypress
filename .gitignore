@@ -105,4 +105,6 @@ dist
 
 #Videos cypress
 videos
-reporter
+
+#Report
+report
