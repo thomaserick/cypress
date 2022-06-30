@@ -10,6 +10,10 @@ Relatorio mais detalhado
 
 - npm i -D mochawesome
 
+Rodar apenas um testes
+
+- it.only()
+
 ### Comando
 
 - npm run test

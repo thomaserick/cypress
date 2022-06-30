@@ -20,7 +20,7 @@ describe("Login e registro de usuario alura pic", () => {
   it('Verifica mensagem de e-mail invalido',()=>{
     cy.contains('a','Register now').click();
     cy.contains('button','Register').click();
-    cy.get('input[formcontrolname="email"').type('thomaserick')
+    cy.get('input[formcontrolname="email"]').type('thomaserick')
     cy.contains('ap-vmessage','Invalid e-mail').should('be.visible')    
 
   })
@@ -28,7 +28,7 @@ describe("Login e registro de usuario alura pic", () => {
   it('Verifica mensagem de senaha com menos de 8 caracteres',()=>{
     cy.contains('a','Register now').click();
     cy.contains('button','Register').click();
-    cy.get('input[formcontrolname="password"').type('123')
+    cy.get('input[formcontrolname="password"]').type('123')
     cy.contains('button','Register').click();
     cy.contains('ap-vmessage','Mininum length is 8').should('be.visible')    
 
@@ -37,9 +37,30 @@ describe("Login e registro de usuario alura pic", () => {
   it('Verifica mensagem nome de usuário com letra maiúscula ',()=>{
     cy.contains('a','Register now').click();
     cy.contains('button','Register').click();
-    cy.get('input[formcontrolname="userName"').type('THOMAS')
+    cy.get('input[formcontrolname="userName"]').type('THOMAS')
     cy.contains('button','Register').click();
     cy.contains('ap-vmessage','Must be lower case').should('be.visible')    
+
+  })
+  
+
+  it.only('fazer login usuario valido',()=>{
+    cy.get('input[formcontrolname="userName"]').type('flavio')
+    cy.get('input[formcontrolname="password"]').type('123')
+    cy.get('button[type="submit"]').click();
+    cy.contains('a','(Logout)').should('be.visible');
+
+  })
+
+  it.only('fazer login usuario invalido',()=>{
+    cy.get('input[formcontrolname="userName"]').type('thomas')
+    cy.get('input[formcontrolname="password"]').type('123')
+    cy.get('button[type="submit"]').click();
+    cy.on('window:alert',(str) => {
+      expect(str).to.equal('invalid user name or password')
+    })
+    
+
 
   })
   
