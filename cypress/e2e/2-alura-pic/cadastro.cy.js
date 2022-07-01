@@ -1,7 +1,7 @@
 describe('Cadastro de usuario alurapic', () => {
 
     beforeEach(() => {
-        cy.visit("https://alura-fotos.herokuapp.com");
+        cy.visit("/");
       });
 
       it('Verifica mensagens validações',()=>{
@@ -16,7 +16,7 @@ describe('Cadastro de usuario alurapic', () => {
         cy.contains('ap-vmessage','Password is required!').should('be.visible')
     
       })
-      
+
     it('Verifica mensagem de e-mail invalido',()=>{
         cy.contains('a','Register now').click();
         cy.contains('button','Register').click();

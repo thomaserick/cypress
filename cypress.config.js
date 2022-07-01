@@ -7,6 +7,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   }, 
+  baseUrl:"https://alura-fotos.herokuapp.com",
   reporter: "mochawesome",
   reporterOptions: {
     reportDir: "cypress/report/mochawesome-report",
