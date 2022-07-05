@@ -14,7 +14,7 @@ describe('Buscar fotos e dados ', () => {
       })
     
       it('fazer login usuario invalido',()=>{
-        cy.login('thomas','123')
+        cy.login(Cypress.env('userName'),Cypress.env('password'))
         cy.on('window:alert',(str) => {
           expect(str).to.equal('invalid user name or password')
         })
