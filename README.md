@@ -23,3 +23,10 @@ Rodar apenas um testes
 - Arrange (Preparar o teste)
 - Act (Rodar o teste)
 - Assert (Verificar as asserções).
+
+### Mock/Stub
+
+- Mock
+  - Mais comportamento
+- Stub
+  - Troca apenas um estado -> 'simular uma requisição para um site'
